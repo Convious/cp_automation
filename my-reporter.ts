@@ -1,6 +1,6 @@
 import { Reporter } from '@playwright/test/reporter';
 import SlackNotify from 'slack-notify';
-const MY_SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
+const MY_SLACK_WEBHOOK_URL = 'your_webhook_here';
 const slack = SlackNotify(MY_SLACK_WEBHOOK_URL);
 const report_link = `http://localhost:9323/`
 
