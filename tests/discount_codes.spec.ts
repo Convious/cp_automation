@@ -32,18 +32,18 @@ test.describe('Control Panel', () => {
       await page.getByRole('button', { name: 'Add new pool' }).click()
       await page.getByRole('button', { name: 'Cancel' }).first().click()
 
-       //Without the delay the clicks are performed too fast and the pool is not deleted
+      // Without the delay the clicks are performed too fast and the pool is not deleted
       await delay(1500)
 
       // TODO need to look for a better solution to delete the added pool
       await page.locator('.sc-eEVmNe > .sc-dFRpbK').first().click()
 
-      //Without the delay the clicks are performed too fast and the pool is not deleted
+      // Without the delay the clicks are performed too fast and the pool is not deleted
       await delay(1000)
 
       await page.getByRole('button', { name: 'Delete' }).first().click()
 
-      // giving some time for the delete task to complete as closing too fast causes the record to not be deleted
+      // Giving some time for the delete task to complete as closing too fast causes the record to not be deleted
       await delay(1000)
         
     });
@@ -71,5 +71,4 @@ test.describe('Control Panel', () => {
       await expect(page.getByRole('cell', { name: '15%' })).toBeVisible()
         
     });
-
   });
