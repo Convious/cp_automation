@@ -1,0 +1,25 @@
+{
+  "name": "cp_automation",
+  "version": "1.0.0",
+  "description": "Control Panel Automation uses Playwright framework to execute tests.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Convious/cp_automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Convious/cp_automation/issues"
+  },
+  "homepage": "https://github.com/Convious/cp_automation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.28.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "slack-notify": "^2.0.6"
+  }
+}

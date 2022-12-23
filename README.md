@@ -22,6 +22,18 @@ Run the install command and select the following to get started:
 
 # Running the tests
 
+### In a root directory create `.env` file
+
+Due to security reasons, the `.env` file containing log-in details were not included in git-project.
+
+Prior to running the tests, make sure to create `.env` file under a root directory of this project (same place where this README file is located) containing these details:
+
+`BASE_URL_CP=https://dash-stage.convious.lt/`
+
+`USERNAME=your_CP_username`
+
+`PASSWORD=your_CP_password`
+
 ### To run all tests:
 
 `npx playwright test`
@@ -38,4 +50,3 @@ Run the install command and select the following to get started:
 
 `npx playwright test --repeat-each X`
 where X is the number of times you want to run it.
-
