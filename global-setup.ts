@@ -5,6 +5,7 @@ async function globalSetup(config: FullConfig) {
 
     // Delay
     const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
+    
     // Some variables from .env file
     const { BASE_URL_CP, USERNAME, PASSWORD } = process.env;
 

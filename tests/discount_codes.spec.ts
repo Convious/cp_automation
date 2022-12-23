@@ -62,7 +62,7 @@ test.describe('Control Panel', () => {
       // go to the Codes tab
       await page.goto(codes_tab)
 
-      // search for the added diuscount code and check it's atributes
+      // search for the added discount code and check it's attributes
       await page.getByPlaceholder('Search').fill(discount_code)
       await expect(page.getByText(discount_code)).toBeVisible()
       await expect(page.getByRole('cell', { name: 'Cart' })).toBeVisible()
