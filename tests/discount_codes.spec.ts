@@ -1,6 +1,6 @@
 import { test, expect, Page } from '@playwright/test';
 
-const { slug, discount_pool, discount_page, discount_code, codes_tab } = process.env;
+const { slug, discount_pool, discount_page, discount_code, codes_tab, input_file, valid_file, invalid_file } = process.env;
 
 // delay is needed for order change as otherwise it throws an error
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
@@ -80,7 +80,7 @@ test.describe('Control Panel', () => {
       // Add a new discount code
       await page.getByRole('button', { name: '+ Add Codes' }).first().click()
       await page.getByText('Upload CSV').click()
-      await page.setInputFiles("input[type='file']", 'test-files/discount_valid.csv')
+      await page.setInputFiles(input_file, valid_file)
 
       // give it some time to upload
       await delay(1000)
@@ -98,7 +98,7 @@ test.describe('Control Panel', () => {
       // Add a new discount code
       await page.getByRole('button', { name: '+ Add Codes' }).first().click()
       await page.getByText('Upload CSV').click()
-      await page.setInputFiles("input[type='file']", 'test-files/discount_invalid.csv')
+      await page.setInputFiles(input_file, invalid_file)
       
       // give it some time to upload
       await delay(1000)

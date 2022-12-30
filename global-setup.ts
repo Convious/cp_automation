@@ -33,5 +33,8 @@ async function globalSetup(config: FullConfig) {
     // input variables
     process.env.discount_pool = `AAA+test+${randomString}`
     process.env.discount_code = `CODE${randomString}`
+    process.env.input_file = "input[type='file']"
+    process.env.valid_file = 'test-files/discount_valid.csv'
+    process.env.invalid_file = 'test-files/discount_invalid.csv'
 }
 export default globalSetup;
