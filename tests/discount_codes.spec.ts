@@ -71,4 +71,40 @@ test.describe('Control Panel', () => {
       await expect(page.getByRole('cell', { name: '15%' })).toBeVisible()
         
     });
+
+    test('Upload valid discount code csv file', async ({ page }) => {
+  
+      // go to the Discount pools page
+      await page.goto(discount_page)
+
+      // Add a new discount code
+      await page.getByRole('button', { name: '+ Add Codes' }).first().click()
+      await page.getByText('Upload CSV').click()
+      await page.setInputFiles("input[type='file']", 'test-files/discount_valid.csv')
+
+      // give it some time to upload
+      await delay(1000)
+
+      // check if validation error does not occur
+      await expect(page.getByText('Upload error')).toBeHidden()
+
+    });
+
+    test('Upload invalid discount code csv file', async ({ page }) => {
+  
+      // go to the Discount pools page
+      await page.goto(discount_page)
+
+      // Add a new discount code
+      await page.getByRole('button', { name: '+ Add Codes' }).first().click()
+      await page.getByText('Upload CSV').click()
+      await page.setInputFiles("input[type='file']", 'test-files/discount_invalid.csv')
+      
+      // give it some time to upload
+      await delay(1000)
+
+      // check if validation error occurs
+      await expect(page.getByText('Upload error')).toBeVisible()
+
+    });
   });
