@@ -1,0 +1,8 @@
+code,valid_from,valid_to,percent_reduction,flat_reduction,article_id,amount,max_uses,remainder_usable,validity_period_from,validity_period_to
+Playwright1,2020-05-28,2022-12-31,20.0,,,,,0,,
+Playwright2,2020-05-28,2022-12-31,15.0,,,,3,0,2022-12-01,2022-12-31
+Playwright3,2020-05-28,2022-12-31,,7.50,,,1,1,,
+Playwright4,2020-05-28,2022-12-31,,5.00,,,3,0,,
+Playwright5,2020-05-28,2022-12-31,20,,1789,1,,0,,
+Playwright6,2020-05-28,2022-12-31,,5,5993,1,,,,
+Playwright7,2020-05-28,2022-12-31,15,,1789|5993,22,1,1,2022-12-01,2022-12-31
